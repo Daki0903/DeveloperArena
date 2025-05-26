@@ -5,7 +5,7 @@
         body {
             background-color: #f0f0f0;
             font-family: Arial, sans-serif;
-            background-image: url("code.png");
+            background-image: url("bluebackround.jpg");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -21,7 +21,7 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: darkred;
+            background-color: lightblue;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
@@ -29,12 +29,15 @@
             font-size: 1.2em;
             font-family: 'Courier New', Courier, monospace;
             box-sizing: border-box;
+            opacity: 0;
         }
         h1 {
-            color: #ffecec;
+            color: #3a5e5c;
             animation: both 1s ease-in-out;
             font-family: 'Courier New', Courier, monospace;
             font-size: 2em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
         a {
             display: inline-block;
@@ -55,11 +58,12 @@
             transform: scale(1.2);
         }
         p {
-            color: #fff6f6;
+            color: #3a5e5c;
             font-size: 1.2em;
             animation: fadeIn 1s ease-in-out forwards;
             text-align: left;
             margin-bottom: 10px;
+            font-weight: heavy;
         }
         @keyframes fadeIn {
             from {
@@ -96,9 +100,8 @@
             }
         }
         
-    </style> 
-    /* dodaj scriptu do naloga */
-    <script>  
+    </style>
+    <script>
         document.addEventListener("DOMContentLoaded", function() {
             const container = document.querySelector('.container');
             container.style.opacity = '1';
@@ -110,4 +113,4 @@
             <h1>Contact Us</h1>
             <p>If you have any questions or need further information, please feel free to reach out to us.</p>
             <p>GitHub: <a href="mailto:Daki0903,  JohanLiebert363">Contact Us</a></p>
-</html>
+</html> 
