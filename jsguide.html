@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Guide</title>
+        <style>
+            body {
+                background-color: #a4fffd;
+                font-family: Arial, sans-serif;
+                background-image: url("bluebackround.jpg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+            }
+            .container {
+                animation: fadeIn 1s ease-in-out forwards;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: rgb(120, 203, 228);
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                color: #fff6f6;
+                font-size: 1.2em;
+                font-family: 'Courier New', Courier, monospace;
+                box-sizing: border-box;
+            }
+            
+            h1 {
+                color: #3a5e5c;
+                animation: both 1s ease-in-out;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 2em;
+            }
+            p {
+                color: #3a5e5cf6;
+            }
+            boxquote {
+                display: block;
+                margin-top: 20px;
+            }
+            pre {
+                background-color: black;
+                color: rgb(255, 255, 255);
+                border-radius: 5px;
+                overflow-x: auto;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                text-align: left;
+                padding: 10px;
+            }
+            .section-title {
+                color: #393b43;
+                margin-top: 30px;
+                font-size: 1.4em;
+                text-align: left;
+            }
+            ul {
+                text-align: left;
+                color: #393b43;
+                list-style-type: disc;
+                margin: 20px 0;
+            }
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            @keyframes both {
+                from {
+                    transform: translateY(-20px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+            a {
+                color: #ffecec;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            a:hover {
+                color: #ffb3b3;
+            }
+            a:visited {
+                color: #ff9999;
+            }
+            a:active {
+                color: #ff8080;
+            }
+            a:focus {
+                outline: none;
+                box-shadow: 0 0 5px #ff8080;
+            }
+            ul li {
+                margin: 10px 0;
+            }
+            ul li a {
+                color: #ffecec;
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>JavaScript Guide</h1>
+            <p>JavaScript is a versatile programming language primarily used for web development. It allows developers to create interactive and dynamic web pages.</p>
+            <boxquote>JavaScript is the programming language of the Web.</boxquote>
+            <pre>console.log("Hello, World!");</pre>
+
+            <div class="section-title">Getting Started</div>
+            <ul>
+                <li>Write JavaScript in a <code>&lt;script&gt;</code> tag or in a separate <code>.js</code> file.</li>
+                <li>Use <code>console.log()</code> to print messages for debugging.</li>
+            </ul>
+            <pre>
+&lt;script&gt;
+    console.log("Hello from JS!");
+&lt;/script&gt;
+            </pre>
+
+            <div class="section-title">Variables & Data Types</div>
+            <ul>
+                <li>Declare variables with <code>let</code>, <code>const</code>, or <code>var</code>.</li>
+                <li>Common types: <code>String</code>, <code>Number</code>, <code>Boolean</code>, <code>Array</code>, <code>Object</code>.</li>
+            </ul>
+            <pre>
+let name = "Alice";
+const age = 30;
+var isActive = true;
+let numbers = [1, 2, 3];
+let person = { name: "Bob", age: 25 };
+            </pre>
+
+            <div class="section-title">Functions</div>
+            <ul>
+                <li>Functions let you reuse code.</li>
+            </ul>
+            <pre>
+function greet(name) {
+    return "Hello, " + name + "!");
+}
+console.log(greet("World"));
+            </pre>
+
+            <div class="section-title">DOM Manipulation</div>
+            <ul>
+                <li>Change HTML content and styles dynamically.</li>
+            </ul>
+            <pre>
+document.getElementById("demo").innerText = "Changed!";
+            </pre>
+
+            <div class="section-title">Event Handling</div>
+            <ul>
+                <li>React to user actions like clicks.</li>
+            </ul>
+            <pre>
+document.querySelector("button").addEventListener("click", function() {
+    alert("Button clicked!");
+});
+            </pre>
+
+            <div class="section-title">Useful Resources</div>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" style="color:#ffecec;">MDN JavaScript Docs</a></li>
+                <li><a href="https://javascript.info/" target="_blank" style="color:#ffecec;">JavaScript.info</a></li>
+            </ul>
+        </div>
+    </body>
+</html>
