@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: #a4fffd;
+            font-family: Arial, sans-serif;
+            background-image: url("bluebackround.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        .container {
+            animation: fadeIn 1s ease-in-out forwards;
+            height: 70vh;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgb(120, 203, 228);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            color: #fff6f6;
+            font-size: 1.2em;
+            font-family: 'Courier New', Courier, monospace;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #ffecec;
+            animation: both 1s ease-in-out;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2em;
+        }
+        p {
+            color: #fff6f6;
+        }
+        boxquote {
+            display: block;
+            margin-top: 20px;
+        }
+        pre {
+            background-color: #f0f0f0;
+            color: rgb(0, 0, 43);
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            margin-left: auto;
+        }
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            @keyframes both {
+                from {
+                    transform: translateY(-20px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+        </style>
+        <title>Python Guide</title>
+    </head>
+<body>
+    <div class="container">
+        <h1>Simple fuctions and variables</h1>
+        <p>In Python, you can define functions using the <code>def</code> keyword. Variables are created by simply assigning a value to a name.</p>
+        <p>Example:</p>
+        <pre>
+def greet(name):
+    print(f"Hello, {name}!")
+name = "World"
+greet(name)
+        </pre>
+       
+    </div>
+</html>
