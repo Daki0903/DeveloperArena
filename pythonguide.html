@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Python Guide</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-image: url("bluebackround.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: lightblue;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            color: #fff6f6;
+            font-size: 1.2em;
+            font-family: 'Courier New', Courier, monospace;
+            box-sizing: border-box;
+            opacity: 0.8;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        h1 {
+            color: #ffecec;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2em;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-size: 1.2em;
+        }
+        a:hover {
+            background-color: #0056b3;
+            transform: scale(1.2);
+        }
+        p {
+            color: #466981;
+            font-size: 1.2em;
+            text-align: left;
+            margin-bottom: 10px;
+            animation: fadeIn 1s ease-in-out forwards;
+            opacity: 0.7 !important;
+            font-weight: 900;
+        }
+        boxquote {
+            display: block;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: lightblue;
+            color: lightblue;
+            border-left: 5px solid #007bff;
+            font-style: italic;
+        }
+        div boxquote p {
+            color: #466981;
+            font-size: 1.2em;
+            text-align: left;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0.8;
+            font-weight: 900;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        input[type="button"] {
+            padding: 10px 20px;
+            background-color: #00fff7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            font-family: 'Courier New', Courier, monospace;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+    <script>
+        addEventListener("DOMContentLoaded", function() {
+            const button = document.querySelector("input[type='button']");
+            button.addEventListener("click", function() {
+                window.location.href = "pyguide2.html";
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Python Guide</h1>
+        <p>Welcome to the Python Guide! Here you will find resources and tutorials to help you learn Python programming.</p>
+        <p>Python is a versatile language that is widely used in web development, data analysis, artificial intelligence, and more.</p>
+        <p>Whether you are a beginner or an experienced programmer, this guide has something for you.</p>
+        <p>Explore the sections below to get started:</p>
+        <boxquote>
+            <p><strong>Getting Started:</strong> Learn the basics of Python, including syntax, data types, and control structures.</p>
+            <p><strong>Advanced Topics:</strong> Dive into more complex topics such as object-oriented programming, decorators, and generators.</p>
+            <p><strong>Web Development:</strong> Discover how to build web applications using frameworks like Flask and Django.</p>
+            <p><strong>Data Science:</strong> Explore libraries like Pandas and NumPy for data manipulation and analysis.</p>
+        </boxquote>
+        <h1>Want to learn more?</h1>
+        <input type="button" value="Click here to learn more">
+    </div>
+</body>
+</html>
