@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Java Guide</title>
+        <style>
+            body {
+                background-color: #f0f0f0;
+                font-family: Arial, sans-serif;
+                background-image: url("bluebackround.jpg");
+                background-size: cover;
+                background-position: center;
+                min-height: 100vh;
+                margin: 0;
+            }
+            .container {
+                max-width: 800px;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: lightblue;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                color: #fff6f6;
+                font-size: 1.2em;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            h1 {
+                color: #ffecec;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 2em;
+            }
+            a {
+                display: inline-block;
+                margin-top: 20px;
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+            }
+            a:hover {
+                background-color: #0056b3;
+                transform: scale(1.2);
+            }
+            p {
+                color: #466981;
+                font-size: 1.2em;
+            }
+            .section-title {
+                margin-top: 30px;
+                font-size: 1.4em;
+                text-align: left;
+                color: #ffecec;
+            }
+            ul {
+                text-align: left;
+                margin: 10px 0;
+                padding: 0 20px;
+            }
+            li {
+                margin-bottom: 10px;
+            }
+            pre {
+                background-color: rgb(0, 0, 0);
+                border-left: 4px solid #000000;
+                padding: 10px;
+                overflow-x: auto;
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Java Guide</h1>
+            <p>Java is a versatile and widely-used programming language known for its portability, performance, and extensive libraries.</p>
+            <p>It is commonly used for building enterprise applications, mobile applications (Android), and web applications.</p>
+            <p>Java's syntax is similar to C++, making it easier for developers familiar with those languages to learn.</p>
+            <a href="https://www.oracle.com/java/technologies/javase-jdk11-downloads.html">Download Java JDK</a>
+
+            <div class="section-title">Getting Started</div>
+            <ul>
+                <li>Install the <a href="https://www.oracle.com/java/technologies/javase-jdk11-downloads.html" target="_blank" style="color:#ffecec;">Java JDK</a> and set up your environment variables.</li>
+                <li>Write Java code in a <code>.java</code> file and compile it with <code>javac</code>.</li>
+                <li>Run your program with <code>java</code>.</li>
+            </ul>
+            <pre>
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+            </pre>
+
+            <div class="section-title">Variables & Data Types</div>
+            <ul>
+                <li>Common types: <code>int</code>, <code>double</code>, <code>boolean</code>, <code>String</code>, <code>char</code>.</li>
+                <li>Variables must be declared with a type.</li>
+            </ul>
+            <pre>
+int age = 25;
+double price = 19.99;
+boolean isJavaFun = true;
+String name = "Alice";
+char grade = 'A';
+            </pre>
+
+            <div class="section-title">Methods</div>
+            <ul>
+                <li>Methods are functions inside classes.</li>
+            </ul>
+            <pre>
+public static int add(int a, int b) {
+    return a + b;
+}
+            </pre>
+
+            <div class="section-title">Classes & Objects</div>
+            <ul>
+                <li>Java is object-oriented. Everything is part of a class.</li>
+            </ul>
+            <pre>
+public class Dog {
+    String name;
+    public Dog(String name) {
+        this.name = name;
+    }
+    public void bark() {
+        System.out.println(name + " says woof!");
+    }
+}
+
+// Usage:
+Dog myDog = new Dog("Buddy");
+myDog.bark();
+            </pre>
+
+            <div class="section-title">Control Structures</div>
+            <ul>
+                <li>Use <code>if</code>, <code>else</code>, <code>for</code>, <code>while</code> for logic and loops.</li>
+            </ul>
+            <pre>
+for (int i = 0; i < 5; i++) {
+    System.out.println(i);
+}
+
+if (age > 18) {
+    System.out.println("Adult");
+} else {
+    System.out.println("Minor");
+}
+            </pre>
+
+            <div class="section-title">Arrays</div>
+            <ul>
+                <li>Arrays store multiple values of the same type.</li>
+            </ul>
+            <pre>
+int[] numbers = {1, 2, 3, 4, 5};
+System.out.println(numbers[0]); // prints 1
+            </pre>
+
+            <div class="section-title">Inheritance</div>
+            <ul>
+                <li>Inheritance lets you create new classes based on existing ones.</li>
+            </ul>
+            <pre>
+class Animal {
+    void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Woof!");
+    }
+}
+
+// Usage:
+Dog d = new Dog();
+d.eat();  // Inherited method
+d.bark(); // Dog's own method
+            </pre>
+
+            <div class="section-title">Exception Handling</div>
+            <ul>
+                <li>Handle errors gracefully using <code>try</code>, <code>catch</code>, and <code>finally</code>.</li>
+            </ul>
+            <pre>
+try {
+    int result = 10 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("Cannot divide by zero!");
+} finally {
+    System.out.println("This always runs.");
+}
+            </pre>
+
+            <div class="section-title">Interfaces</div>
+            <ul>
+                <li>Interfaces define methods that classes must implement.</li>
+            </ul>
+            <pre>
+interface Animal {
+    void makeSound();
+}
+
+class Cat implements Animal {
+    public void makeSound() {
+        System.out.println("Meow");
+    }
+}
+            </pre>
+
+            <div class="section-title">Collections</div>
+            <ul>
+                <li>Use collections like <code>ArrayList</code> for dynamic arrays.</li>
+            </ul>
+            <pre>
+import java.util.ArrayList;
+
+ArrayList&lt;String&gt; fruits = new ArrayList&lt;&gt;();
+fruits.add("Apple");
+fruits.add("Banana");
+System.out.println(fruits.get(0)); // prints Apple
+            </pre>
+
+            <div class="section-title">Useful Resources</div>
+            <ul>
+                <li><a href="https://docs.oracle.com/javase/tutorial/" target="_blank" style="color:#ffecec;">Oracle Java Tutorials</a></li>
+                <li><a href="https://www.w3schools.com/java/" target="_blank" style="color:#ffecec;">W3Schools Java Tutorial</a></li>
+                <li><a href="https://www.geeksforgeeks.org/java/" target="_blank" style="color:#ffecec;">GeeksforGeeks Java</a></li>
+            </ul>
+        </div>
+    </body>
+</html>
