@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Cube</title>
+    <style>
+        body {
+            background-color: #000000;
+            font-family: Arial, sans-serif;
+            
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .cube {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            transform: rotateX(30deg) rotateY(45deg);
+            animation: rotate 10s infinite linear;
+            margin: 100px auto;
+            perspective: 800px;
+            perspective-origin: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+        }
+        .face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ccc;
+        }
+        .front {
+            transform: translateZ(100px);
+            background-color: #ff5733;
+            width: 200px;
+            height: 200px;
+
+        }
+        .back {
+            transform: rotateY(180deg) translateZ(100px);
+            background-color: #33ff57;
+            width: 200px;
+            height: 200px;
+        }
+        .left {
+            transform: rotateY(-90deg) translateZ(100px);
+            background-color: #3357ff;
+            width: 200px;
+            height: 200px;
+
+        }
+        .right {
+            transform: rotateY(90deg) translateZ(100px);
+            background-color: #ff33a1;
+            width: 200px;
+            height: 200px;
+        }
+        .top {
+            transform: rotateX(90deg) translateZ(100px);
+            background-color: #ffcc33;
+            width: 200px;
+            height: 200px;
+        }
+        .bottom {
+            transform: rotateX(-90deg) translateZ(100px);
+            background-color: #33ccff;
+            width: 200px;
+            height: 200px;
+        }
+        @keyframes rotate {
+            from {
+                transform: rotateX(30deg) rotateY(0deg);
+            }
+            to {
+                transform: rotateX(30deg) rotateY(360deg);
+            }
+        }
+        h1 {
+            color: #ffffff;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 20px;
+            text-shadow: #ffffff 2px 2px 4px;
+            font-size: 2em;
+            
+        }
+    </style>
+<body>
+    
+        <h1>Loading</h1>
+        <div class="cube">
+            <div class="face front
+                "></div>
+            <div class="face back"></div>
+            <div class="face left"></div>
+            <div class="face right"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+        </div>
+</body>
+</html>
